@@ -1532,8 +1532,8 @@ button {
 		transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 		padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
 		position: relative;
-		width: 40rem;
-		max-width: 100%;
+		width: 80rem;
+		max-width: 90%;
 		background-color: rgba(27, 31, 34, 0.85);
 		border-radius: 4px;
 		opacity: 0;
@@ -1647,3 +1647,48 @@ button {
 	body.is-preload #footer {
 		opacity: 0;
 	}
+
+
+/* Ensure images scale properly */
+.responsive-img {
+	width: 100%; /* Make the image take up 100% of its container width */
+	height: auto; /* Maintain aspect ratio */
+	float: left; /* Ensure the image floats to the left */
+	margin: 0 1rem 1rem 0; /* Space around the image */
+	max-width: 600px; /* Set a maximum width for large screens */
+	border-radius: 8px; /* Optional: Add rounded corners to images */
+}
+
+/* Optional: Clearfix for floating images */
+#research::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .responsive-img {
+        width: 100%; /* Full width on smaller screens */
+        margin: 0 0 1rem 0; /* Adjust margin for narrow screens */
+    }
+}
+
+/* Style for the first bold text in each paragraph */
+.bold-text-1 {
+    font-size: 1.2rem; /* Adjusted font size to be a bit smaller */
+    font-weight: bold; /* Ensure the text is bold */
+    color: rgb(243, 147, 147); /* Set the text color to white */
+    display: block; /* Make it block to ensure it's on its own line */
+    margin-bottom: 0.5rem; /* Add space below the bold text */
+}
+
+/* Style for the first bold text in each paragraph */
+.heading-bold {
+    font-size: 1.3rem; /* Adjusted font size to be a bit smaller */
+    font-weight: bold; /* Ensure the text is bold */
+    color: rgb(243, 147, 147); /* Set the text color */
+    text-transform: uppercase; /* Automatically capitalize the text */
+    display: block; /* Make it block to ensure it's on its own line */
+    margin-bottom: 0.5rem; /* Add space below the bold text */
+}
